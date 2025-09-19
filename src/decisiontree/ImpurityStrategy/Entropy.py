@@ -13,6 +13,43 @@ class Entropy(ImpurityStrategy):
         proportions = proportions.replace(0, 1e-10)
         return (-proportions * np.log2(proportions)).sum()
     
+    def get_detailed_calculations(self, df: DataFrame, feature: str, target: str):
+        """Get detailed step-by-step calculations for a feature split"""
+        total_entropy = self._get_impurity_measure(df, target)
+        calculations = {
+            'feature': feature,
+            'total_entropy': total_entropy,
+            'total_samples': len(df),
+            'splits': [],
+            'weighted_entropy': 0,
+            'information_gain': 0
+        }
+        
+        weighted_entropy = 0
+        for value in sorted(df[feature].unique()):
+            subset = df[df[feature] == value]
+            proportion = len(subset) / len(df)
+            subset_entropy = self._get_impurity_measure(subset, target)
+            weighted_contribution = proportion * subset_entropy
+            weighted_entropy += weighted_contribution
+            
+            # Get class distribution for this subset
+            class_dist = dict(subset[target].value_counts())
+            
+            split_info = {
+                'value': value,
+                'samples': len(subset),
+                'proportion': proportion,
+                'entropy': subset_entropy,
+                'weighted_contribution': weighted_contribution,
+                'class_distribution': class_dist
+            }
+            calculations['splits'].append(split_info)
+        
+        calculations['weighted_entropy'] = weighted_entropy
+        calculations['information_gain'] = total_entropy - weighted_entropy
+        return calculations
+    
     def _get_splitting_criterion(self,df: DataFrame, curr_feature: str, target: str):
         total_entropy = self._get_impurity_measure(df,target)
         weighted_entropy = 0

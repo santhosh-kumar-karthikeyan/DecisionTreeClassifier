@@ -1,0 +1,50 @@
+AgeGroup,Sex,BP,Cholesterol,Drug
+Young Adult,F,HIGH,HIGH,drugY
+Middle-Aged,M,LOW,HIGH,drugC
+Middle-Aged,M,LOW,HIGH,drugC
+Young Adult,F,NORMAL,HIGH,drugX
+Senior,F,LOW,HIGH,drugY
+Young Adult,F,NORMAL,HIGH,drugX
+Middle-Aged,F,NORMAL,HIGH,drugY
+Middle-Aged,M,LOW,HIGH,drugC
+Senior,M,NORMAL,HIGH,drugY
+Middle-Aged,M,LOW,NORMAL,drugY
+Middle-Aged,F,LOW,HIGH,drugC
+Young Adult,F,HIGH,NORMAL,drugY
+Middle-Aged,M,LOW,HIGH,drugY
+Senior,F,LOW,HIGH,drugY
+Middle-Aged,F,NORMAL,HIGH,drugX
+Teen,F,HIGH,NORMAL,drugY
+Senior,M,LOW,NORMAL,drugX
+Middle-Aged,M,HIGH,HIGH,drugA
+Young Adult,M,LOW,HIGH,drugC
+Young Adult,F,HIGH,NORMAL,drugY
+Middle-Aged,M,LOW,NORMAL,drugY
+Senior,M,NORMAL,HIGH,drugY
+Middle-Aged,M,LOW,NORMAL,drugY
+Middle-Aged,F,LOW,HIGH,drugY
+Young Adult,F,LOW,HIGH,drugY
+Young Adult,F,HIGH,NORMAL,drugY
+Young Adult,M,HIGH,HIGH,drugY
+Middle-Aged,F,NORMAL,NORMAL,drugX
+Young Adult,F,LOW,NORMAL,drugY
+Middle-Aged,M,LOW,HIGH,drugY
+Teen,F,NORMAL,NORMAL,drugX
+Senior,M,HIGH,HIGH,drugB
+Middle-Aged,M,LOW,NORMAL,drugX
+Senior,F,HIGH,NORMAL,drugY
+Middle-Aged,M,NORMAL,HIGH,drugX
+Middle-Aged,M,NORMAL,NORMAL,drugX
+Young Adult,M,HIGH,NORMAL,drugA
+Young Adult,M,LOW,NORMAL,drugX
+Young Adult,F,NORMAL,NORMAL,drugX
+Teen,M,NORMAL,HIGH,drugX
+Senior,F,NORMAL,HIGH,drugY
+Middle-Aged,F,HIGH,NORMAL,drugB
+Middle-Aged,M,NORMAL,NORMAL,drugY
+Young Adult,M,NORMAL,HIGH,drugX
+Middle-Aged,F,NORMAL,NORMAL,drugX
+Senior,F,NORMAL,NORMAL,drugX
+Young Adult,F,HIGH,HIGH,drugA
+Senior,M,LOW,HIGH,drugC
+Young Adult,M,NORMAL,HIGH,drugY

@@ -17,3 +17,11 @@ class ImpurityStrategy(ABC):
     @abstractmethod
     def get_best_feature(self, df: pd.DataFrame, target: str):
         raise NotImplementedError
+    
+    def get_detailed_calculations(self, df: pd.DataFrame, feature: str, target: str):
+        """Get detailed step-by-step calculations for a feature split.
+        Default implementation returns basic information."""
+        return {
+            'feature': feature,
+            'gain': self._get_splitting_criterion(df, feature, target)
+        }
